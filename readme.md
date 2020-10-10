@@ -37,16 +37,20 @@ Redis Persistence Documentation [here](https://redis.io/topics/persistence)
 
 To Turn On RDB,
 Find the key call `dbfilename` in redis config and add the dump file name and location.
+Also add a location to dump the files. (add this to `dir`)
 
 ```
+dir /data
 dbfilename dump.rdb
 ```
 
 To Turn On Append Only Mode (AOF)
 Find the key call `appendonly` in redis config and set it to yes.
 Then Find `appendfilename` in redis config and add the file name and location.
+Also add a location to dump the files. (add this to `dir`)
 
 ```
+dir /data
 appendonly yes
 appendfilename appendonly.aof
 ```
